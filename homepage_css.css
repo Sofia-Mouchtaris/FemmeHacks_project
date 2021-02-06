@@ -1,0 +1,39 @@
+body {
+	background-image: linear-gradient(to bottom right, #0352fc, #42f5a7);
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.topnav {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.topnav a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 18%;
+  text-align: center;
+}
+
+.topnav a:hover {
+  background-color: #c4c4c4;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #03fcf0;
+  color: black;
+}
