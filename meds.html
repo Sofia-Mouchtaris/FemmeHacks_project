@@ -3,19 +3,81 @@
 		<title>
 			MYgraine
 		</title>
-		<link rel="stylesheet" href="homepage_css.css">
-	</head>
+		<link rel="stylesheet" href="meds_css.css">
+    <link rel="icon" href="https://cdn.glitch.com/dc41517b-e457-4b42-b052-f09c22a7352f%2Fcircle_logo.png?v=1612643800091">
+	  <script src="meds.js"></script>
+  </head>
 ​
-	<body>
+	<body style="font-family:verdana">
 		<div class="topnav">
 			<a href="homepage.html">Home</a>
 			<a href="calendar.html">Calendar</a>
-			<a href="tips.html">Migraine Tips</a>
+			<a href="tips.html">Tips and Resources</a>
 			<a class="active" href="meds.html">Medication</a>
-			<a href="appointments.html">Appointments</a>
 		</div>
 		
 		<h1> Medication </h1>
 		
+    <fieldset>
+      <legend>Input New Medication</legend>
+    
+      <form action="form results" method="get"> 
+        <label for="medname">Medication Name:</label><br>
+        <input type="text" id="medname" name="medname"><br>
+        <br>
+        
+        <label for="purpose" id="purpose">Purpose of Medication:</label><br>
+        <input type="radio" id="Relief" name="purpose" value="Relief">
+        <label for="Relief">Relief</label><br>
+        <input type="radio" id="Prevention" name="purpose" value="Prevention">
+        <label for="Prevention">Prevention</label><br>
+        
+        <br>
+        <div class="slidecontainer">
+          <label for="medRange">Dosage:</label>
+          <input type="range" min="1mg" max="500mg" value = "200mg" 
+                 class="slider" id="medRange">
+        </div>
+        <br>
+        
+        <label for="tablets">Quantity of tablets:</label>
+        <input type="number" id="tablets" min="1" max="5"><br>
+        
+        <br>
+        <label for="takeWith">Take With:</label><br>
+        <select id="takeWith">
+          <option>Water</option>
+          <option>Food</option>
+          <option>Nothing</option>
+        </select>
+        <br>
+      
+        <br>
+        <label for="additonal">Add any additional notes:</label><br>
+        <textarea id="additional" rows="6" cols="30"></textarea>
+        
+        <!--
+        <br><br>
+        <form action="form results" method="get">
+          <input type="submit" value="Save this Medication">
+        </form>
+        -->
+        
+        <br>
+        <form action="form results" method="get">
+          <button type="reset">Reset Form</button>
+        </form>
+      
+      
+      
+      </form>
+      <button onclick = "addToList()">Add to Medication List!</button>
+      </fieldset>
+
+    <h1> My Medications
+    </h1>
+    
+    <ol id="list_item"></ol>
+
 	</body>
 </html>
