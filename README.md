@@ -1,1 +1,3 @@
-# FemmeHacks_project
+# Get Started!
+
+Add files and start typing 🎉
